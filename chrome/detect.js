@@ -1,7 +1,4 @@
 // detect if speech/aural stylesheet exists
-
-var batou {
-
 // use that stylesheet instead of the screen stylesheet
 
 /* 
@@ -11,3 +8,9 @@ var batou {
 3: ideally, should fall back to aural and then all if speech not available
 
 */
+
+function batou {
+    var sheet = 
+    
+    
+}
