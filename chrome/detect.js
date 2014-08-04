@@ -10,7 +10,21 @@
 */
 
 function batou {
-    var sheet = 
+    var sheet = document.getElementsByTagName('link');
+// if it <link> exists
+    for (var a = sheet.length - 1; a >= 0; a--)
+    { if (sheet[a].getAttribute('media').indexOf('style')> -1 && sheet[a].getAttribute('title'))
     
     
 }
+
+
+
+
+function changeStyle(title) {
+var lnks = document.getElementsByTagName('link');
+for (var i = lnks.length - 1; i >= 0; i--) {
+if (lnks[i].getAttribute('rel').indexOf('style')> -1 && lnks[i].getAttribute('title')) {
+lnks[i].disabled = true;
+if (lnks[i].getAttribute('title') == title) lnks[i].disabled = false;
+}}}
