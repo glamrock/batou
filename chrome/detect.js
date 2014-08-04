@@ -9,22 +9,21 @@
 
 */
 
-function batou {
+function batou(media) {
     var sheet = document.getElementsByTagName('link');
 // if it <link> exists
     for (var a = sheet.length - 1; a >= 0; a--)
-    { if (sheet[a].getAttribute('media').indexOf('style')> -1 && sheet[a].getAttribute('title'))
-    
-    
-}
-
-
-
-
-function changeStyle(title) {
-var lnks = document.getElementsByTagName('link');
-for (var i = lnks.length - 1; i >= 0; i--) {
-if (lnks[i].getAttribute('rel').indexOf('style')> -1 && lnks[i].getAttribute('title')) {
-lnks[i].disabled = true;
-if (lnks[i].getAttribute('title') == title) lnks[i].disabled = false;
+    { if (sheet[a].getAttribute('rel').indexOf('style')> -1 && sheet[a].getAttribute('media')) {
+    sheet[a].disabled = true;
+    if (sheet[a].getAttribute('media') == media) sheet[a].disabled = false;
 }}}
+
+/* 
+
+Check IsMediaType = screen
+If screen (despite button being toggled on), then look for appropriate stylesheets
+Apply speech, if no speech, apply aural
+If no alt style sheets, ding and then use default
+Possibly use print style sheet if no other?
+
+*/
